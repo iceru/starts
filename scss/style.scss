@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
 
 @import 'variables';
+@import 'overrides';
 @import 'template';
 @import 'index';
+@import 'forms';
 
 body,
 html {
@@ -15,6 +17,7 @@ a {
     text-decoration: none;
 
     &:hover {
+        color: inherit;
         text-decoration: none;
     }
 }

@@ -2,6 +2,25 @@
     background-color: #1A82A7;
     padding: 2rem 0;
 
+    &.secondary {
+        background-color: white;
+        color: $primary;
+
+        .hamburger {
+            color: $primary;
+        }
+
+        @include breakpoint(untilTablet) {
+            .lang {
+                display: none;
+            }
+        }
+    }
+
+    .hamburger {
+        display: none;
+    }
+
     .menu {
         display: flex;
         color: white;
@@ -29,6 +48,70 @@
 
             .active {
                 font-weight: bold;
+            }
+        }
+    }
+
+    @include breakpoint(untilTablet) {
+        .hamburger {
+            display: block;
+            color: white;
+            font-size: 32px;
+        }
+
+        .menu {
+            display: none;
+        }
+    }
+}
+
+.offcanvas {
+    .list-menu {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .lang {
+        margin-top: 2rem;
+
+        .active {
+            font-weight: bold;
+            color: $primary;
+        }
+    }
+}
+
+.footer {
+    background-color: $primary;
+    color: white;
+    padding: 42px 0;
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .contacts {
+        display: flex;
+        font-size: 14px;
+        justify-content: flex-end;
+
+        .item {
+            margin-right: 2rem;
+        }
+
+        @include breakpoint(untilTablet) {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .item {
+                margin-bottom: 1rem;
+                width: 49%;
+                margin-right: 0;
             }
         }
     }

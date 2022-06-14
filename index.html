@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
         integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -53,6 +54,39 @@
                     <a href="#">ENG</a>
                 </div>
             </div>
+            <a class="hamburger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <i class="bi bi-list"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                <img src="/images/logo-primary.png" alt="">
+            </h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="menu">
+                <ul class="list-menu">
+                    <li>
+                        <a href="/">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="#">Kenapa STARTS</a>
+                    </li>
+                    <li>
+                        <a href="#">Testimoni</a>
+                    </li>
+                </ul>
+                <div class="lang">
+                    <a href="#" class="active">IND</a>
+                    |
+                    <a href="#">ENG</a>
+                </div>
+            </div>
         </div>
     </div>
     <div class="header">
@@ -74,57 +108,124 @@
                 <div class="col-12 col-lg-6 right-header">
                     <div class="form-container">
                         <h5>Daftarkan Properti Anda</h5>
-
-                        <div class="sewa">
-                            <div class="row mb-3">
-                                <div class="col-6">Nama Pemilik</div>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                        placeholder="Isi di sini">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="sewa-tab" data-bs-toggle="tab"
+                                    data-bs-target="#sewa" type="button" role="tab" aria-controls="sewa"
+                                    aria-selected="true">Sewa</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="jual-tab" data-bs-toggle="tab" data-bs-target="#jual"
+                                    type="button" role="tab" aria-controls="jual" aria-selected="false">Jual</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="sewa" role="tabpanel" aria-labelledby="sewa-tab">
+                                <div class="sewa">
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Nama Pemilik</div>
+                                        <div class="col-12 col-lg-6">
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="Isi di sini">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">No Telephone</div>
+                                        <div class="col-12 col-lg-6">
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="Isi di sini">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Jenis Property</div>
+                                        <div class="col-12 col-lg-6">
+                                            <select class="form-select" name="" id="">
+                                                <option>Apartment</option>
+                                                <option>Rumah</option>
+                                                <option>Ruko</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Furniture</div>
+                                        <div class="col-12 col-lg-6">
+                                            <select class="form-select" name="" id="">
+                                                <option>Full Furnish</option>
+                                                <option>Half Furnish</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Lokasi Properti</div>
+                                        <div class="col-12 col-lg-6">
+                                            <select class="form-select" name="" id="">
+                                                <option>Jakarta Selatan</option>
+                                                <option>Jakarta Barat</option>
+                                                <option>Jakarta Utara</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-primary w-100">Daftar Sekarang</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-6">No Telephone</div>
-                                <div class="col-6">
-                                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                                        placeholder="Isi di sini">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-6">Jenis Property</div>
-                                <div class="col-6">
-                                    <select class="form-select" name="" id="">
-                                        <option>Apartment</option>
-                                        <option>Rumah</option>
-                                        <option>Ruko</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-6">Furniture</div>
-                                <div class="col-6">
-                                    <select class="form-select" name="" id="">
-                                        <option>Full Furnish</option>
-                                        <option>Half Furnish</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-6">Lokasi Properti</div>
-                                <div class="col-6">
-                                    <select class="form-select" name="" id="">
-                                        <option>Jakarta Selatan</option>
-                                        <option>Jakarta Barat</option>
-                                        <option>Jakarta Utara</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-12">
-                                    <button type="button" class="btn btn-primary w-100">Daftar Sekarang</button>
+                            <div class="tab-pane fade" id="jual" role="tabpanel" aria-labelledby="jual-tab">
+                                <div class="sewa">
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Nama Pemilik</div>
+                                        <div class="col-12 col-lg-6">
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="Isi di sini">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">No Telephone</div>
+                                        <div class="col-12 col-lg-6">
+                                            <input type="text" class="form-control" name="" id=""
+                                                aria-describedby="helpId" placeholder="Isi di sini">
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Jenis Property</div>
+                                        <div class="col-12 col-lg-6">
+                                            <select class="form-select" name="" id="">
+                                                <option>Apartment</option>
+                                                <option>Rumah</option>
+                                                <option>Ruko</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Furniture</div>
+                                        <div class="col-12 col-lg-6">
+                                            <select class="form-select" name="" id="">
+                                                <option>Full Furnish</option>
+                                                <option>Half Furnish</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Lokasi Properti</div>
+                                        <div class="col-12 col-lg-6">
+                                            <select class="form-select" name="" id="">
+                                                <option>Jakarta Selatan</option>
+                                                <option>Jakarta Barat</option>
+                                                <option>Jakarta Utara</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <button type="button" class="btn btn-primary w-100">Daftar Sekarang</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -136,19 +237,19 @@
             <div class="row">
                 <div class="col-12 col-lg-4">
                     <div class="item">
-                        <h1>3400+</h1>
+                        <h1><span class="count">3400</span>+</h1>
                         <p>Pengguna Aktif</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="item">
-                        <h1>3000+</h1>
+                        <h1><span class="count">3000</span> +</h1>
                         <p>Properti Disewakan</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4">
                     <div class="item">
-                        <h1>2500+</h1>
+                        <h1><span class="count">2500</span>+</h1>
                         <p>Properti Disewa</p>
                     </div>
                 </div>
@@ -212,6 +313,7 @@
             </div>
         </div>
     </div>
+
     <div class="join">
         <div class="container">
             <h2>Cara bergabung dengan STARTS</h2>
@@ -245,77 +347,264 @@
         </div>
     </div>
 
-    <div class="property">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-lg-6">
-                    <h3>Properti yang berhasil disewakan</h3>
+    <div class="container-fluid">
+        <div class="property">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-6">
+                        <h3>Properti yang berhasil disewakan</h3>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <h6>
+                            Beberapa pilihan properti dari para pengguna STARTS yang
+                            berhasil disewakan
+                        </h6>
+                    </div>
                 </div>
-                <div class="col-12 col-lg-6">
-                    <h6>
-                        Beberapa pilihan properti dari para pengguna STARTS yang
-                        berhasil disewakan
-                    </h6>
+
+                <div class="items">
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/Sudirman.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h6>Sudirman Residence</h6>
+                            <p>Jakarta Selatan</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/Mediterania.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h6>Mediterania Perl</h6>
+                            <p>Jakarta Pusat</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/Sunny.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h6>Sunny River Side</h6>
+                            <p>Surabaya Barat</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/Bellmont.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h6>Bellmont Orchard</h6>
+                            <p>Bandung</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="image">
+                            <img src="/images/Sunny.png" alt="">
+                        </div>
+                        <div class="text">
+                            <h6>Sunny River Side</h6>
+                            <p>Surabaya Barat</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="items">
-                <div class="item">
-                    <div class="image">
-                        <img src="/images/Sudirman.png" alt="">
+        <div class="promo">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-3">
+                        <h3>Promosi Terbatas</h3>
+                        <p>Dapatkan keuntungan ganda dengan menggunakan promoso yang sedang berlangsung</p>
                     </div>
-                    <div class="text">
-                        <h6>Sudirman Residence</h6>
-                        <p>Jakarta Selatan</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/images/Mediterania.png" alt="">
-                    </div>
-                    <div class="text">
-                        <h6>Mediterania Perl</h6>
-                        <p>Jakarta Pusat</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/images/Sunny.png" alt="">
-                    </div>
-                    <div class="text">
-                        <h6>Sunny River Side</h6>
-                        <p>Surabaya Barat</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/images/Bellmont.png" alt="">
-                    </div>
-                    <div class="text">
-                        <h6>Bellmont Orchard</h6>
-                        <p>Bandung</p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="image">
-                        <img src="/images/Sunny.png" alt="">
-                    </div>
-                    <div class="text">
-                        <h6>Sunny River Side</h6>
-                        <p>Surabaya Barat</p>
+                    <div class="col-12 col-lg-9">
+                        <div class="sliders">
+                            <div class="item">
+                                <img src="/images/Promo.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="/images/Promo.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="/images/Promo.png" alt="">
+                            </div>
+                            <div class="item">
+                                <img src="/images/Promo.png" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="testimoni">
+        <div class="container">
+            <div class="content-header">
+                <h2>Bagaimana STARTS Menurut Mereka?</h2>
+                <p>Beberapa ulasan dari pengguna STARTS yang mendapatkan hunian idaman mereka</p>
+            </div>
+            <div class="row pemilik">
+                <div class="col-12 col-lg-6 left-side">
+                    <img src="/images/comment.png" class="w-100" alt="">
+                </div>
+
+                <div class="col-12 col-lg-6 right-side">
+                    <div class="badge-comment">
+                        Komentar Pemilik Properti
+                    </div>
+
+                    <h5>“Luar biasa, properti yang saya sewakan di STARTS banyak peminatnya, daftarnya juga gampang.
+                        STARTS memang juara.” </h5>
+                    <h6>Vincent Pamungkas</h6>
+                    <p>Pemilik Apartement - Jakarta Selatan</p>
+                </div>
+            </div>
+
+            <div class="penyewa">
+                <div class="badge-comment">
+                    Komentar Penyewa Properti
+                </div>
+                <div class="sliders">
+                    <div class="item">
+                        <h5>Drestantha Candra</h5>
+                        <small>Verified</small>
+                        <img src="/images/Stars.png" alt="">
+                        <p>Saya dan istri mendapatkan tempat tinggal saat ini dari STARTS. Hingga saat ini, saya sangat
+                            nyaman dengan pilihan Apartment saya.</p>
+                    </div>
+                    <div class="item">
+                        <h5>Kristo Khalid Immanuel</h5>
+                        <small>Verified</small>
+                        <img src="/images/Stars.png" alt="">
+                        <p>Sangat membantu saya untuk mendapatkan apartment idaman saya!</p>
+                    </div>
+                    <div class="item">
+                        <h5>Retno Kumolo</h5>
+                        <small>Verified</small>
+                        <img src="/images/Stars.png" alt="">
+                        <p>Piliha properti di STARTS sangat strategis dan terpercaya, sehingga saya dan suami dengan
+                            mudah mendapatkan hunian terbaik.</p>
+                    </div>
+                    <div class="item">
+                        <h5>Kristo Khalid Immanuel</h5>
+                        <small>Verified</small>
+                        <img src="/images/Stars.png" alt="">
+                        <p>Sangat membantu saya untuk mendapatkan apartment idaman saya!</p>
+                    </div>
+                    <div class="item">
+                        <h5>Retno Kumolo</h5>
+                        <small>Verified</small>
+                        <img src="/images/Stars.png" alt="">
+                        <p>Piliha properti di STARTS sangat strategis dan terpercaya, sehingga saya dan suami dengan
+                            mudah mendapatkan hunian terbaik.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+                    <div class="logo">
+                        <img src="/images/logo starts.png" alt="">
+                    </div>
+                    <p>
+                        Kami menyediakan informasi tentang properti seperti rumah, villa dan apartemen untuk membantu
+                        orang menemukan rumah impian mereka
+                    </p>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="contacts">
+                        <div class="item">
+                            <p class="fw-bold">
+                                Phone
+                            </p>
+                            <p>(671) 555-0110</p>
+                        </div>
+                        <div class="item">
+                            <p class="fw-bold">
+                                Email
+                            </p>
+                            <p>info@starts.id</p>
+                        </div>
+                        <div class="item">
+                            <p class="fw-bold">
+                                Alamat
+                            </p>
+                            <p>Jl. Jakarta Merdeka no.45 <br> Mandalika</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script>
         $(document).ready(function () {
             $('.property .items').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
+                arrows: false,
                 dots: true,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
             })
+
+
+            $('.penyewa .sliders').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: '<div class="arrow-item previous"><i type="button" class="bi bi-chevron-left"></i></div>',
+                nextArrow: '<div class="arrow-item next"><i type="button" class="bi bi-chevron-right next"></i></div>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+
+            $('.promo .sliders').slick({
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true,
+                prevArrow: '<i type="button" class="bi bi-chevron-left previous"></i>',
+                nextArrow: '<i type="button" class="bi bi-chevron-right next"></i>',
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            })
+
+            $('.count').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).text().replace(/\D/g, '')
+                }, {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
         });
     </script>
 </body>

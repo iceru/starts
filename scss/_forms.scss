@@ -1,0 +1,149 @@
+.forms {
+    color: black;
+    padding: 40px 0;
+
+    h4 {
+        font-weight: 700;
+    }
+
+    form {
+        margin-top: 45px;
+    }
+
+    @include breakpoint(desktop) {
+        width: 40%;
+        margin: auto;
+
+        h4 {
+            font-size: 27px;
+        }
+    }
+
+    @include breakpoint(untilTablet) {
+        padding: 10px 0;
+
+        form {
+            margin-top: 2rem;
+        }
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+
+        .form-label {
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .form-input {
+            padding: 10px 16px;
+        }
+
+        &.number {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .number-input {
+                display: flex;
+                align-items: center;
+            }
+
+            .minus,
+            .plus {
+                padding: 1rem;
+                border: 1px solid rgba($color: #000000, $alpha: 0.15);
+                border-radius: 8px;
+                height: 48px;
+                width: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .form-control {
+                width: 40px;
+                border: none;
+                font-weight: bold;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+
+    .form-selection {
+        margin-bottom: 18px;
+
+        .form-label {
+            font-weight: 600;
+        }
+
+        .selections {
+            display: flex;
+            overflow: auto;
+            flex-wrap: nowrap;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            .item {
+                border-radius: 32px;
+                border: 1px solid #E0E3EB;
+                margin-bottom: 1rem;
+                padding: 12px 24px;
+                margin-right: 1rem;
+                color: #888B97;
+                display: flex;
+                cursor: pointer;
+                align-items: center;
+                transition: all .2s ease;
+                font-weight: 500;
+                background-color: white;
+
+                svg {
+                    margin-right: 11px;
+                }
+
+                &.active,
+                &:hover {
+                    transition: all .2s ease;
+                    background: #D1F5FA;
+                    border-color: #D1F5FA;
+                    color: #00A7DB;
+
+                    svg path {
+                        fill: #00A7DB;
+                    }
+                }
+            }
+
+            .dropdown-item {
+                display: flex;
+                color: #888B97;
+                align-items: center;
+
+
+                svg {
+                    margin-right: 11px;
+                }
+
+            }
+        }
+
+    }
+
+    .btn-groups {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+
+        .btn {
+            margin: 0 .25rem;
+        }
+    }
+}
