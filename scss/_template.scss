@@ -1,0 +1,35 @@
+.navbar {
+    background-color: #1A82A7;
+    padding: 2rem 0;
+
+    .menu {
+        display: flex;
+        color: white;
+
+        >ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                a {
+                    text-decoration: none;
+                    padding: .5rem 2rem;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .lang {
+            padding: 0 2rem;
+
+            .active {
+                font-weight: bold;
+            }
+        }
+    }
+}
