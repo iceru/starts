@@ -119,8 +119,16 @@
   margin-bottom: 1.5rem;
 }
 
+.offcanvas .list-menu li a:hover {
+  color: #28A5CB;
+}
+
 .offcanvas .lang {
   margin-top: 2rem;
+}
+
+.offcanvas .lang a:hover {
+  color: #28A5CB;
 }
 
 .offcanvas .lang .active {
@@ -502,14 +510,32 @@
   margin-bottom: 10px;
 }
 
+@media (min-width: 1200px) {
+  .container-xxl {
+    max-width: 1620px;
+  }
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container-xxl {
+    max-width: 1720px;
+  }
+  .container {
+    max-width: 1320px;
+  }
+}
+
 .property {
   background-color: #2B8BAD;
-  margin: 40px;
   color: white;
   padding: 50px 0;
   padding: 80px;
   position: relative;
   padding-bottom: 90px;
+  margin: 0 28px;
 }
 
 .property .slick-dots {
@@ -639,12 +665,13 @@
 
 .promo {
   padding: 50px 0;
+  margin: 0 46px;
 }
 
 .promo h3 {
   font-size: 32px;
   font-weight: 700;
-  color: #183B56;
+  color: black;
 }
 
 .promo .sliders {
@@ -995,15 +1022,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: auto;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.forms .form-selection .selections::-webkit-scrollbar {
-  display: none;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .forms .form-selection .selections .item {
@@ -1028,6 +1048,10 @@
 
 .forms .form-selection .selections .item svg {
   margin-right: 11px;
+}
+
+.forms .form-selection .selections .item.hidden {
+  display: none;
 }
 
 .forms .form-selection .selections .item.active, .forms .form-selection .selections .item:hover {

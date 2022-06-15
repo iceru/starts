@@ -337,14 +337,34 @@
     }
 }
 
+@include breakpoint(desktop) {
+    .container-xxl {
+        max-width: 1620px;
+    }
+
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .container-xxl {
+        max-width: 1720px;
+    }
+
+    .container {
+        max-width: 1320px;
+    }
+}
+
 .property {
     background-color: #2B8BAD;
-    margin: 40px;
     color: white;
     @include pageDefault();
     padding: 80px;
     position: relative;
     padding-bottom: 90px;
+    margin: 0 28px;
 
     .slick-dots {
         bottom: -3rem;
@@ -472,11 +492,12 @@
 
 .promo {
     @include pageDefault();
+    margin: 0 46px;
 
     h3 {
         font-size: 32px;
         font-weight: 700;
-        color: $body-dark;
+        color: black;
     }
 
     .sliders {

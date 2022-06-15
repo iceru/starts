@@ -73,11 +73,21 @@
 
         li {
             margin-bottom: 1.5rem;
+
+            a:hover {
+
+                color: $primary;
+            }
         }
     }
 
     .lang {
         margin-top: 2rem;
+
+
+        a:hover {
+            color: $primary;
+        }
 
         .active {
             font-weight: bold;

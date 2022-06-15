@@ -81,15 +81,7 @@
 
         .selections {
             display: flex;
-            overflow: auto;
-            flex-wrap: nowrap;
-
-            &::-webkit-scrollbar {
-                display: none;
-            }
-
-            -ms-overflow-style: none;
-            scrollbar-width: none;
+            flex-wrap: wrap;
 
             .item {
                 border-radius: 32px;
@@ -107,6 +99,10 @@
 
                 svg {
                     margin-right: 11px;
+                }
+
+                &.hidden {
+                    display: none;
                 }
 
                 &.active,
