@@ -80,8 +80,7 @@
         }
 
         .selections {
-            display: flex;
-            flex-wrap: wrap;
+            display: block;
 
             .btn-check:checked+.item {
                 transition: all .2s ease;
@@ -98,6 +97,10 @@
             .btn-group-vertical>.btn,
             .btn-group>.btn {
                 flex: 0 0 auto;
+            }
+
+            .btn-group {
+                display: flex;
             }
 
             .item {
