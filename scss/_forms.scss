@@ -83,6 +83,23 @@
             display: flex;
             flex-wrap: wrap;
 
+            .btn-check:checked+.item {
+                transition: all .2s ease;
+                background: #D1F5FA;
+                border-color: #D1F5FA;
+                color: #00A7DB;
+
+                svg path {
+                    fill: #00A7DB;
+                }
+
+            }
+
+            .btn-group-vertical>.btn,
+            .btn-group>.btn {
+                flex: 0 0 auto;
+            }
+
             .item {
                 border-radius: 32px;
                 border: 1px solid #E0E3EB;
@@ -97,6 +114,10 @@
                 font-weight: 500;
                 background-color: white;
 
+                &:last-child {
+                    margin-right: 0;
+                }
+
                 svg {
                     margin-right: 11px;
                 }
@@ -105,7 +126,6 @@
                     display: none;
                 }
 
-                &.active,
                 &:hover {
                     transition: all .2s ease;
                     background: #D1F5FA;

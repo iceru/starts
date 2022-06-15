@@ -1046,6 +1046,25 @@
       flex-wrap: wrap;
 }
 
+.forms .form-selection .selections .btn-check:checked + .item {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  background: #D1F5FA;
+  border-color: #D1F5FA;
+  color: #00A7DB;
+}
+
+.forms .form-selection .selections .btn-check:checked + .item svg path {
+  fill: #00A7DB;
+}
+
+.forms .form-selection .selections .btn-group-vertical > .btn,
+.forms .form-selection .selections .btn-group > .btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
 .forms .form-selection .selections .item {
   border-radius: 32px;
   border: 1px solid #E0E3EB;
@@ -1066,6 +1085,10 @@
   background-color: white;
 }
 
+.forms .form-selection .selections .item:last-child {
+  margin-right: 0;
+}
+
 .forms .form-selection .selections .item svg {
   margin-right: 11px;
 }
@@ -1074,7 +1097,7 @@
   display: none;
 }
 
-.forms .form-selection .selections .item.active, .forms .form-selection .selections .item:hover {
+.forms .form-selection .selections .item:hover {
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
   background: #D1F5FA;
@@ -1082,7 +1105,7 @@
   color: #00A7DB;
 }
 
-.forms .form-selection .selections .item.active svg path, .forms .form-selection .selections .item:hover svg path {
+.forms .form-selection .selections .item:hover svg path {
   fill: #00A7DB;
 }
 
