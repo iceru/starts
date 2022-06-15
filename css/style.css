@@ -55,6 +55,19 @@
   color: #28A5CB;
 }
 
+.navbar.secondary .lang {
+  padding: 0 2rem;
+}
+
+.navbar.secondary .lang .active {
+  font-weight: bold;
+}
+
+.navbar.secondary .lang a:hover {
+  color: black;
+  font-weight: bold;
+}
+
 @media (max-width: 992px) {
   .navbar.secondary .lang {
     display: none;
@@ -88,6 +101,8 @@
 
 .navbar .menu > ul li a:hover {
   text-decoration: none;
+  color: black;
+  font-weight: bold;
 }
 
 .navbar .menu .lang {
@@ -95,6 +110,11 @@
 }
 
 .navbar .menu .lang .active {
+  font-weight: bold;
+}
+
+.navbar .menu .lang a:hover {
+  color: black;
   font-weight: bold;
 }
 
