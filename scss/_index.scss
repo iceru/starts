@@ -70,11 +70,12 @@
 
         .img-listing {
             position: absolute;
-            right: 1.5rem;
+            right: 2rem;
             top: 80px;
 
             @include breakpoint(largeDesktop) {
                 right: 8rem;
+                top: 80px;
             }
 
             img {

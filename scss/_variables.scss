@@ -21,7 +21,7 @@ $body-dark: #183B56;
     }
 
     @else if $point ==largeDesktop {
-        @media (min-width: 1400px) {
+        @media (min-width: 1450px) {
             @content;
         }
     }

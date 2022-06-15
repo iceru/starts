@@ -232,7 +232,7 @@
   position: relative;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1450px) {
   .header .left-header .content {
     padding-right: 8rem;
   }
@@ -262,13 +262,14 @@
 
 .header .left-header .img-listing {
   position: absolute;
-  right: 1.5rem;
+  right: 2rem;
   top: 80px;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1450px) {
   .header .left-header .img-listing {
     right: 8rem;
+    top: 80px;
   }
 }
 
