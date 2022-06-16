@@ -75,10 +75,10 @@
                         <a href="/">Beranda</a>
                     </li>
                     <li>
-                        <a href="#">Kenapa STARTS</a>
+                        <a href="#about">Kenapa STARTS</a>
                     </li>
                     <li>
-                        <a href="#">Testimoni</a>
+                        <a href="#testimoni">Testimoni</a>
                     </li>
                 </ul>
                 <div class="lang">
@@ -231,6 +231,21 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasExample');
+        $('.offcanvas-body .menu a').click(function (e) {
+            e.preventDefault();
+            bsOffcanvas.hide();
+            if ($(this).attr('href').includes('#')) {
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 700);
+            } else {
+                window.location.href = $(this).attr('href');
+            }
+        });
+    </script>
 
     <div class="counters">
         <div class="container">
