@@ -215,12 +215,13 @@
 
 
     .row {
-        border: 1px solid #ECEEF2;
         border-radius: 4px;
     }
 
     .left-side {
         padding: 50px;
+        border: 1px solid #ECEEF2;
+        border-right: 0;
 
         h4 {
             font-size: 28px;
@@ -279,6 +280,7 @@
 
     .right-side {
         padding-right: 0;
+        padding-left: 0;
 
         img {
             height: 100%;

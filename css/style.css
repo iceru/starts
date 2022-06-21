@@ -408,12 +408,13 @@
 }
 
 .about .row {
-  border: 1px solid #ECEEF2;
   border-radius: 4px;
 }
 
 .about .left-side {
   padding: 50px;
+  border: 1px solid #ECEEF2;
+  border-right: 0;
 }
 
 .about .left-side h4 {
@@ -475,6 +476,7 @@
 
 .about .right-side {
   padding-right: 0;
+  padding-left: 0;
 }
 
 .about .right-side img {
