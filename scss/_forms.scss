@@ -2,12 +2,13 @@
     color: black;
     padding: 40px 0;
 
-    h4 {
+    h2 {
         font-weight: 700;
+        font-size: 27px;
     }
 
     form {
-        margin-top: 45px;
+        margin-top: 1rem;
     }
 
     @include breakpoint(desktop) {
@@ -25,6 +26,11 @@
         form {
             margin-top: 2rem;
         }
+    }
+
+    .form-control,
+    .form-select {
+        padding: 10px 1rem;
     }
 
     .form-group {
@@ -73,7 +79,6 @@
     }
 
     .form-selection {
-        margin-bottom: 18px;
 
         .form-label {
             font-weight: 600;

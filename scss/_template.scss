@@ -132,15 +132,26 @@
 
         .item {
             margin-right: 2rem;
+
+            p:first-child {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+
+    @include breakpoint(untilTablet) {
+        .first-row {
+            margin-bottom: 40px;
         }
 
-        @include breakpoint(untilTablet) {
+        .contacts {
             flex-wrap: wrap;
             justify-content: flex-start;
 
             .item {
-                margin-bottom: 1rem;
-                width: 49%;
+                margin-bottom: 28px;
+                width: 100%;
                 margin-right: 0;
             }
         }

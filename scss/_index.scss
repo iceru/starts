@@ -8,29 +8,36 @@
     padding-bottom: 4rem;
     position: relative;
 
-    &:before {
-        content: '';
-
-        background: rgba(255, 255, 255, 0.7);
-        mix-blend-mode: normal;
-        opacity: 0.6;
-        filter: blur(135.914px);
-        height: 300px;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        z-index: 1;
-    }
+    // &:before {
+    //     content: '';
+    //     background: rgba(255, 255, 255, 0.7);
+    //     mix-blend-mode: normal;
+    //     opacity: 0.6;
+    //     filter: blur(135.914px);
+    //     height: 300px;
+    //     width: 100%;
+    //     bottom: 0;
+    //     left: 0;
+    //     position: absolute;
+    //     z-index: 1;
+    // }
 
 
     .img-bg {
         position: absolute;
         bottom: 0;
-        left: 0;
+        left: 4rem;
 
         img {
-            width: 90%;
+            width: 40%;
+        }
+
+        @include breakpoint(untilTablet) {
+            left: 0;
+
+            img {
+                width: 100%;
+            }
         }
 
         z-index: 0;
@@ -47,25 +54,13 @@
         }
 
 
-        h1 {
+        h2 {
             font-size: 48px;
             line-height: 68px;
             letter-spacing: 0.2px;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
             color: white;
-            font-weight: 800;
+            font-weight: 600;
             position: relative;
-
-            &:after {
-                content: '';
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                background-color: white;
-                height: 5.5px;
-                width: 67%;
-                position: absolute;
-                bottom: -20px;
-                left: 0;
-            }
         }
 
         .img-listing {
@@ -124,6 +119,10 @@
             border-radius: 8px;
             padding: 2rem;
 
+            @include breakpoint(untilTablet) {
+                padding: 40px 20px;
+            }
+
             h5 {
                 color: #5A7184;
                 font-weight: 700;
@@ -135,10 +134,10 @@
 
     @include breakpoint(untilTablet) {
         .left-header {
-            margin-bottom: 6rem;
+            margin-bottom: 1rem;
 
-            h1 {
-                font-size: 2.5rem;
+            h2 {
+                font-size: 2rem;
                 line-height: 1.5;
 
                 &:after {
@@ -164,15 +163,6 @@
 .counters {
     @include pageDefault();
 
-    .container {
-        .row {
-            @include breakpoint(desktop) {
-                width: 85%;
-                margin: auto;
-            }
-        }
-    }
-
     .item {
         background-color: #00B6E1;
         border-radius: 20px;
@@ -183,7 +173,7 @@
         align-items: center;
         flex-direction: column;
 
-        h1 {
+        .text {
             margin-bottom: 6px;
             font-weight: 700;
             font-size: 48px;
@@ -223,14 +213,14 @@
         border: 1px solid #ECEEF2;
         border-right: 0;
 
-        h4 {
+        h2 {
             font-size: 28px;
             color: $body-dark;
             font-weight: 600;
             margin-bottom: 12px;
         }
 
-        >h6 {
+        >p {
             line-height: 32px;
         }
 
@@ -253,7 +243,7 @@
                 }
 
                 .text {
-                    h6 {
+                    h3 {
                         font-weight: 500;
                         color: $body-dark;
                     }
@@ -303,7 +293,7 @@
             color: $body-dark;
         }
 
-        >h6 {
+        >p {
             text-align: center;
             line-height: 32px;
         }
@@ -314,10 +304,10 @@
             .item {
                 text-align: center;
 
-
-
-                @include breakpoint(untilTablet) {
-                    margin-bottom: 1.5rem;
+                p {
+                    font-size: 14px;
+                    width: 90%;
+                    margin: auto;
                 }
 
                 img {
@@ -326,14 +316,18 @@
                     margin-bottom: 30px;
                 }
 
-                p {
-                    font-size: 14px;
-                }
-
-                h5 {
+                h3 {
                     font-size: 22px;
                     color: $body-dark;
                     margin-bottom: 10px;
+                }
+
+                @include breakpoint(untilTablet) {
+                    margin-bottom: 1.5rem;
+
+                    p {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -364,7 +358,7 @@
     background-color: #2B8BAD;
     color: white;
     @include pageDefault();
-    padding: 80px;
+    padding: 80px 115px;
     position: relative;
     padding-bottom: 90px;
     margin: 0 28px;
@@ -410,6 +404,13 @@
         }
     }
 
+
+    @include breakpoint(desktop) {
+        .slick-list {
+            margin-right: -30px;
+        }
+    }
+
     &:before {
         content: '';
         position: absolute;
@@ -425,14 +426,56 @@
         z-index: 0;
     }
 
-    h3 {
+    h2 {
         font-size: 36px;
         font-weight: 400;
     }
 
-    h6 {
+    p {
         font-weight: 400;
         line-height: 32px;
+    }
+
+    .arrow-item {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        z-index: 2;
+        cursor: pointer;
+
+        .bi::after {
+            font-weight: 800 !important;
+        }
+
+        &.previous {
+            left: -80px;
+        }
+
+        &.next {
+            right: -80px;
+        }
+
+        @include breakpoint(untilTablet) {
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 1rem;
+
+            &.previous {
+                left: -10px;
+            }
+
+            &.next {
+                right: -10px;
+            }
+        }
     }
 
     @include breakpoint(untilTablet) {
@@ -471,7 +514,7 @@
                 }
             }
 
-            h6 {
+            h3 {
                 color: $body-dark;
                 margin-bottom: 8px;
                 font-weight: 600;
@@ -497,14 +540,20 @@
     @include pageDefault();
     margin: 0 46px;
 
-    h3 {
+    @include breakpoint(untilTablet) {
+        margin: 0;
+    }
+
+    h2 {
         font-size: 32px;
         font-weight: 700;
         color: black;
     }
 
     .sliders {
-        padding: 0 3rem;
+        @include breakpoint(desktop) {
+            padding: 0 3rem;
+        }
 
         .item {
             margin: 0 .5rem;
@@ -547,7 +596,7 @@
 
     .content-header {
         text-align: center;
-        margin-bottom: 200px;
+        margin-bottom: 6rem;
 
         h2 {
             font-weight: 600;
@@ -598,7 +647,7 @@
                 padding-left: 2rem;
             }
 
-            h5 {
+            .comment {
                 font-size: 24px;
                 line-height: 46px;
                 font-weight: 400;
@@ -606,7 +655,7 @@
                 letter-spacing: 0.2px;
             }
 
-            h6 {
+            .name {
                 font-size: 20px;
                 font-weight: 700;
                 color: $body-dark;
@@ -622,12 +671,12 @@
             }
 
             .right-side {
-                h5 {
+                .comment {
                     font-size: 20px;
                     line-height: 36px;
                 }
 
-                h6 {
+                .name {
                     font-size: 16px;
                 }
 
@@ -658,6 +707,13 @@
             margin-left: -28px;
             z-index: 1;
             position: relative;
+        }
+
+        h4 {
+            color: black;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
         }
 
         @include breakpoint(untilTablet) {
@@ -742,6 +798,63 @@
                 p {
                     color: black;
                 }
+            }
+        }
+    }
+}
+
+.cta-footer {
+    position: relative;
+    @include pageDefault();
+
+    .bg-img {
+        img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    @include breakpoint(untilTablet) {
+        .bg-img {
+            img {
+                height: 300px;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+
+    .cta-footer-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        width: 90%;
+
+        h3 {
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        @include breakpoint(untilTablet) {
+            h3 {
+                font-size: 2rem;
+            }
+        }
+
+        .btn-secondary {
+            background-color: #FFC200;
+            border-color: #FFC200;
+            color: #183B56;
+            padding: 12px 1rem;
+            width: 243px;
+
+            &:hover {
+                background-color: lighten($color: #FFC200, $amount: 5%);
+                border-color: lighten($color: #FFC200, $amount: 5%);
             }
         }
     }

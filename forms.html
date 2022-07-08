@@ -33,11 +33,11 @@
 <body>
     <div class="navbar secondary">
         <div class="container">
-            <div class="logo">
+            <h1 class="logo">
                 <a href="/">
-                    <img src="/images/logo-primary.png" alt="">
+                    <img src="/images/logo-primary.png" alt="Starts Indonesia">
                 </a>
-            </div>
+            </h1>
             <div class="lang">
                 <a href="#" class="active">IND</a>
                 |
@@ -81,21 +81,36 @@
 
     <div class="forms">
         <div class="container">
-            <h4>Lengkapi Informasi Properti</h4>
+            <h2>Lengkapi Informasi Properti</h2>
             <p>Mohon isi data sesuai </p>
 
             <form action="">
-                <div class="form-group">
-                    <label for="" class="form-label">No Handphone</label>
-                    <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
-                        placeholder="ex. 081xxxxxxx">
+                <div class="form-selection">
+                    <div class="form-label">Tujuan Pendaftaran</div>
+                    <div class="selections">
+                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="pendaftaran" id="sewa" autocomplete="off"
+                                checked>
+                            <label class="btn item" for="sewa">Sewa</label>
+
+                            <input type="radio" class="btn-check" name="pendaftaran" id="jual" autocomplete="off">
+                            <label class="btn item" for="jual">Jual</label>
+
+                        </div>
+
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="" class="form-label">Nama Lengkap</label>
                     <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
                         placeholder="Masukkan nama lengkap anda">
                 </div>
-                <div class="form-selection">
+                <div class="form-group">
+                    <label for="" class="form-label">No Telephone</label>
+                    <input type="tel" class="form-control" name="" id="" aria-describedby="helpId"
+                        placeholder="ex. 081xxxxxxx">
+                </div>
+                <!-- <div class="form-selection">
                     <div class="form-label">Jenis Properti</div>
                     <div class="selections">
                         <div class="btn-group flex-wrap" role="group" aria-label="Basic radio toggle button group">
@@ -165,34 +180,15 @@
                             </label>
                         </div>
                     </div>
-                </div>
-                <div class="form-selection">
-                    <div class="form-label">Tujuan Pendaftaran</div>
-                    <div class="selections">
-                        <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                            <input type="radio" class="btn-check" name="pendaftaran" id="sewa" autocomplete="off"
-                                checked>
-                            <label class="btn item" for="sewa">Sewa</label>
-
-                            <input type="radio" class="btn-check" name="pendaftaran" id="jual" autocomplete="off">
-                            <label class="btn item" for="jual">Jual</label>
-
-                        </div>
-
-                    </div>
-                </div>
+                </div> -->
                 <div class="form-group">
-                    <label for="" class="form-label">Alamat Properti</label>
+                    <label for="" class="form-label">Lokasi Properti</label>
                     <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
                         placeholder="Masukkan alamat lengkap properti">
                 </div>
                 <div class="form-group">
-                    <label for="" class="form-label">Kepemilikan</label>
-                    <select class="form-select" name="" id="">
-                        <option>Pilih Salah Satu</option>
-                        <option>-</option>
-                        <option>-</option>
-                    </select>
+                    <label for="" class="form-label">Floor plan area</label>
+                    <input type="number" class="form-control" name="" id="" aria-describedby="helpId" placeholder="18">
                 </div>
                 <div class="form-group">
                     <label for="" class="form-label">Kepemilikan</label>
@@ -203,14 +199,21 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="" class="form-label">Kondisi Properti</label>
+                    <label for="" class="form-label">Harga sewa yang diinginkan</label>
                     <select class="form-select" name="" id="">
-                        <option>Pilih Salah Satu</option>
+                        <option>Pilih Rentang Harga</option>
                         <option>-</option>
                         <option>-</option>
                     </select>
                 </div>
-                <div class="form-group number">
+                <div class="form-group">
+                    <label for="" class="form-label">Waktu sewa yang diinginkan</label>
+                    <select class="form-select" name="" id="">
+                        <option>6 Bulan</option>
+                        <option>12 Bulan</option>
+                    </select>
+                </div>
+                <!-- <div class="form-group number">
                     <div class="text">
                         <label for="" class="form-label">Jumlah Kamar</label>
                         <p>Berapa jumlah kamar yang ada di properti anda </p>
@@ -220,11 +223,11 @@
                         <input type="text" class="form-control" value="1" />
                         <span class="plus"><img src="/images/Plus in Circle.png" alt=""></span>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="btn-groups">
                     <button type="button" class="btn btn-outline-primary">Cancel</button>
-                    <button type="button" class="btn btn-primary">Daftarkan</button>
+                    <button type="button" class="btn btn-primary">Kirim OTP</button>
                 </div>
             </form>
         </div>
