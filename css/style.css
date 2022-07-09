@@ -482,8 +482,12 @@
   width: 32px;
   height: 5px;
 }
+.property .slick-list {
+  margin: 0 1rem;
+}
 @media (min-width: 1200px) {
   .property .slick-list {
+    margin: 0;
     margin-right: -30px;
   }
 }
@@ -537,13 +541,13 @@
   .property .arrow-item {
     width: 2.5rem;
     height: 2.5rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .property .arrow-item.previous {
-    left: -10px;
+    left: -14px;
   }
   .property .arrow-item.next {
-    right: -10px;
+    right: -14px;
   }
 }
 @media (max-width: 992px) {
@@ -609,6 +613,9 @@
   font-size: 32px;
   font-weight: 700;
   color: black;
+}
+.promo .sliders {
+  padding: 0 1.5rem;
 }
 @media (min-width: 1200px) {
   .promo .sliders {
@@ -1005,6 +1012,68 @@
 }
 .forms .btn-groups .btn {
   margin: 0 0.25rem;
+}
+
+.content-page .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.content-page .container .content-img {
+  margin-bottom: 0.5rem;
+}
+.content-page .container .content-text {
+  margin-bottom: 40px;
+}
+.content-page .container .content-text h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #183B56;
+  margin-bottom: 1rem;
+}
+.content-page .container .content-text p {
+  color: #5A7184;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+@media (max-width: 992px) {
+  .content-page .container .content-text p {
+    font-size: 16px;
+  }
+}
+.content-page .container .content-text .sent-code a {
+  color: #00A7CB;
+}
+.content-page .container .content-otp {
+  margin-bottom: 40px;
+}
+.content-page .container .content-otp .otp-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.content-page .container .content-otp .otp-input input {
+  width: 50px;
+  height: 50px;
+  border-color: #E6E6E6;
+  margin: 0 0.25rem;
+  text-align: center;
+}
+.content-page .container .content-otp .otp-input input:focus {
+  box-shadow: none;
+  border-color: #00A7CB;
+}
+.content-page .container .content-otp .otp-text {
+  color: #5A7184;
+  font-size: 18px;
+}
+@media (max-width: 992px) {
+  .content-page .container .content-otp .otp-text {
+    font-size: 16px;
+  }
 }
 
 body,

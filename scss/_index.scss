@@ -8,21 +8,6 @@
     padding-bottom: 4rem;
     position: relative;
 
-    // &:before {
-    //     content: '';
-    //     background: rgba(255, 255, 255, 0.7);
-    //     mix-blend-mode: normal;
-    //     opacity: 0.6;
-    //     filter: blur(135.914px);
-    //     height: 300px;
-    //     width: 100%;
-    //     bottom: 0;
-    //     left: 0;
-    //     position: absolute;
-    //     z-index: 1;
-    // }
-
-
     .img-bg {
         position: absolute;
         bottom: 0;
@@ -404,9 +389,14 @@
         }
     }
 
+    .slick-list {
+        margin: 0 1rem;
+    }
+
 
     @include breakpoint(desktop) {
         .slick-list {
+            margin: 0;
             margin-right: -30px;
         }
     }
@@ -466,14 +456,14 @@
         @include breakpoint(untilTablet) {
             width: 2.5rem;
             height: 2.5rem;
-            font-size: 1rem;
+            font-size: 1.5rem;
 
             &.previous {
-                left: -10px;
+                left: -14px;
             }
 
             &.next {
-                right: -10px;
+                right: -14px;
             }
         }
     }
@@ -551,6 +541,8 @@
     }
 
     .sliders {
+        padding: 0 1.5rem;
+
         @include breakpoint(desktop) {
             padding: 0 3rem;
         }
