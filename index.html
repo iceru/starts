@@ -123,23 +123,23 @@
                             <div class="tab-pane fade show active" id="sewa" role="tabpanel" aria-labelledby="sewa-tab">
                                 <div class="sewa">
                                     <div class="row mb-3">
-                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Nama Pemilik</div>
-                                        <div class="col-12 col-lg-6">
+                                        <div class="col-12 col-lg-5 mb-2 mb-lg-0">Nama Pemilik</div>
+                                        <div class="col-12 col-lg-7">
                                             <input type="text" class="form-control alpha-only" name="" id=""
                                                 aria-describedby="helpId" placeholder="Isi di sini">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">No Telephone</div>
-                                        <div class="col-12 col-lg-6">
+                                        <div class="col-12 col-lg-5 mb-2 mb-lg-0">No Telephone</div>
+                                        <div class="col-12 col-lg-7">
                                             <input type="tel" class="form-control number-only" name="" id=""
                                                 aria-describedby="helpId" placeholder="Isi di sini">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <!-- NEW -->
-                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Lokasi Property</div>
-                                        <div class="col-12 col-lg-6">
+                                        <div class="col-12 col-lg-5 mb-2 mb-lg-0">Lokasi Property</div>
+                                        <div class="col-12 col-lg-7">
                                             <select class="form-select" name="" id="">
                                                 <option selected>Pilih Lokasi</option>
                                             </select>
@@ -155,23 +155,23 @@
                             <div class="tab-pane fade" id="jual" role="tabpanel" aria-labelledby="jual-tab">
                                 <div class="sewa">
                                     <div class="row mb-3">
-                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0 alpha-only">Nama Pemilik</div>
-                                        <div class="col-12 col-lg-6">
+                                        <div class="col-12 col-lg-5 mb-2 mb-lg-0 alpha-only">Nama Pemilik</div>
+                                        <div class="col-12 col-lg-7">
                                             <input type="text" class="form-control" name="" id=""
                                                 aria-describedby="helpId" placeholder="Isi di sini">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
-                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0 number-only">No Telephone</div>
-                                        <div class="col-12 col-lg-6">
+                                        <div class="col-12 col-lg-5 mb-2 mb-lg-0 number-only">No Telephone</div>
+                                        <div class="col-12 col-lg-7">
                                             <input type="tel" class="form-control" name="" id=""
                                                 aria-describedby="helpId" placeholder="Isi di sini">
                                         </div>
                                     </div>
                                     <div class="row mb-3">
                                         <!-- NEW -->
-                                        <div class="col-12 col-lg-6 mb-2 mb-lg-0">Lokasi Property</div>
-                                        <div class="col-12 col-lg-6">
+                                        <div class="col-12 col-lg-5 mb-2 mb-lg-0">Lokasi Property</div>
+                                        <div class="col-12 col-lg-7">
                                             <select class="form-select" name="" id="">
                                                 <option selected>Pilih Lokasi</option>
                                             </select>
@@ -452,33 +452,28 @@
                     <div class="item">
                         <h4>Drestantha Candra</h4>
                         <small>Verified</small>
-                        <img src="/images/Stars.png" alt="">
                         <p>Saya dan istri mendapatkan tempat tinggal saat ini dari STARTS. Hingga saat ini, saya sangat
                             nyaman dengan pilihan Apartment saya.</p>
                     </div>
                     <div class="item">
                         <h4>Kristo Khalid Immanuel</h4>
                         <small>Verified</small>
-                        <img src="/images/Stars.png" alt="">
                         <p>Sangat membantu saya untuk mendapatkan apartment idaman saya!</p>
                     </div>
                     <div class="item">
                         <h4>Retno Kumolo</h4>
                         <small>Verified</small>
-                        <img src="/images/Stars.png" alt="">
                         <p>Piliha properti di STARTS sangat strategis dan terpercaya, sehingga saya dan suami dengan
                             mudah mendapatkan hunian terbaik.</p>
                     </div>
                     <div class="item">
                         <h4>Kristo Khalid Immanuel</h4>
                         <small>Verified</small>
-                        <img src="/images/Stars.png" alt="">
                         <p>Sangat membantu saya untuk mendapatkan apartment idaman saya!</p>
                     </div>
                     <div class="item">
                         <h4>Retno Kumolo</h4>
                         <small>Verified</small>
-                        <img src="/images/Stars.png" alt="">
                         <p>Piliha properti di STARTS sangat strategis dan terpercaya, sehingga saya dan suami dengan
                             mudah mendapatkan hunian terbaik.</p>
                     </div>
@@ -488,7 +483,7 @@
     </div>
 
     <div class="cta-footer">
-        <div class="container">
+        <div class="container-xxl">
             <div class="bg-img">
                 <img src="/images/cta-footer.png" alt="">
             </div>
@@ -593,16 +588,11 @@
 
             $(".alpha-only").on("keydown", function (event) {
                 // Allow controls such as backspace, tab etc.
-                var arr = [8, 9, 16, 17, 20, 35, 36, 37, 38, 39, 40, 45, 46];
-
-                // Allow letters
-                for (var i = 65; i <= 90; i++) {
-                    arr.push(i);
-                }
-
-                // Prevent default if not in array
-                if (jQuery.inArray(event.which, arr) === -1) {
+                var regex = new RegExp("^[a-zA-Z ]+$");
+                var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+                if (!regex.test(key)) {
                     event.preventDefault();
+                    return false;
                 }
             });
 

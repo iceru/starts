@@ -160,7 +160,7 @@
 .header {
   background-color: #1A82A7;
   padding-top: 2rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
   position: relative;
 }
 .header .img-bg {
@@ -281,6 +281,7 @@
 
 .counters {
   padding: 50px 0;
+  padding-top: 2rem;
 }
 .counters .item {
   background-color: #00B6E1;
@@ -350,6 +351,7 @@
 }
 .about .left-side .items .item .text h3 {
   font-weight: 500;
+  font-size: 18px;
   color: #183B56;
 }
 .about .left-side .items .item .text p {
@@ -425,7 +427,6 @@
   .container-xxl {
     max-width: 1620px;
   }
-
   .container {
     max-width: 1140px;
   }
@@ -434,7 +435,6 @@
   .container-xxl {
     max-width: 1720px;
   }
-
   .container {
     max-width: 1320px;
   }

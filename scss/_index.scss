@@ -5,7 +5,7 @@
 .header {
     background-color: #1A82A7;
     padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
     position: relative;
 
     .img-bg {
@@ -147,6 +147,7 @@
 
 .counters {
     @include pageDefault();
+    padding-top: 2rem;
 
     .item {
         background-color: #00B6E1;
@@ -230,6 +231,7 @@
                 .text {
                     h3 {
                         font-weight: 500;
+                        font-size: 18px;
                         color: $body-dark;
                     }
 
