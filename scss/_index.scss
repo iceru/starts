@@ -800,6 +800,7 @@
 .cta-footer {
     position: relative;
     @include pageDefault();
+    margin: 0 28px;
 
     .bg-img {
         img {
