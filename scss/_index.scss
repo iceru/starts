@@ -496,6 +496,10 @@
             padding-bottom: 24px;
             margin-right: 30px;
 
+            &.null {
+                background-color: transparent;
+            }
+
 
             .image {
                 margin-bottom: 24px;

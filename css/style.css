@@ -575,6 +575,9 @@
   padding-bottom: 24px;
   margin-right: 30px;
 }
+.property .items .item.null {
+  background-color: transparent;
+}
 .property .items .item .image {
   margin-bottom: 24px;
 }
