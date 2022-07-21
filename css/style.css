@@ -448,6 +448,12 @@
   padding-bottom: 90px;
   margin: 0 28px;
 }
+.property .slick-track {
+  display: flex !important;
+}
+.property .slick-slide {
+  height: inherit !important;
+}
 .property .slick-dots {
   bottom: -3rem;
   left: 0;
